@@ -1,0 +1,141 @@
+:root {
+  --background-color: #222831;
+  --background-color-2: #f3f3f3;
+  --foreground-color: #393E46;
+  --accent-color: #00ADB5;
+  --text-color: #EEEEEE;
+  --secondary-text-color: #bfbfbf;
+}
+
+@font-face {
+  font-family: poppins;
+}
+.text-main {
+  color: var(--text-color);
+  font-family: poppins, sans-serif;
+}
+
+.text-main-2 {
+  color: var(--text-color);
+  font-family: poppins, sans-serif;
+}
+
+.text-paragraph {
+  color: var(--secondary-text-color);
+  font-family: poppins, sans-serif;
+}
+
+body {
+  margin: 1.5em;
+  background-color: var(--background-color);
+}
+
+.logo {
+  text-decoration: none;
+  font-family: Montserrat, sans-serif;
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.logo:hover {
+  text-decoration: none;
+}
+
+nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: white;
+  height: 100vh;
+  width: 50%;
+  z-index: 999;
+  text-transform: uppercase;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 8em;
+}
+nav ul a {
+  color: var(--accent-color);
+  padding: 0.75em 2em;
+  display: block;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: poppins, sans-serif;
+}
+nav ul:hover {
+  background: none;
+}
+nav .close {
+  float: right;
+  margin: 1.5em 2em;
+  width: 2em;
+}
+nav .close path {
+  fill: var(--accent-color) !important;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+header svg {
+  width: 2em;
+  cursor: pointer;
+}
+header svg path {
+  fill: white;
+}
+
+.open-nav {
+  transform: translateX(0);
+}
+
+@media only screen and (min-width: 680px) {
+  body {
+    margin: 1.5em 5em;
+  }
+}
+@media only screen and (min-width: 920px) {
+  .menu {
+    display: none;
+  }
+  nav {
+    transform: translateX(0);
+    position: unset;
+    display: block;
+    width: auto;
+    height: auto;
+    background: none;
+  }
+  nav svg.close {
+    display: none;
+  }
+  nav ul {
+    display: flex;
+    margin: 0;
+  }
+  nav ul a {
+    color: var(--text-color);
+    padding: 0.5em 1.5em;
+    font-size: 1rem;
+  }
+  nav ul a:hover {
+    color: var(--secondary-text-color);
+    background: none;
+  }
+  nav ul a:active {
+    color: var(--accent-color);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .wrapper {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

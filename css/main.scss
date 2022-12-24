@@ -49,7 +49,7 @@ nav {
   top: 0;
   background: white;
   height: 100vh;
-  width: 50%;
+  width: 75%;
   z-index: 999;
   text-transform: uppercase;
   transform: translateX(100%);
@@ -67,10 +67,10 @@ nav {
       text-decoration: none;
       font-size: 1.2rem;
       font-family: poppins, sans-serif;
-    }
 
-    &:hover {
-      background: none;
+      &:hover {
+        background: var(--background-color-2);
+      }
     }
   }
 
@@ -80,7 +80,7 @@ nav {
     width: 2em;
 
     path {
-      fill: var(--accent-color) !important;
+      fill: black !important;
     }
   }
 }

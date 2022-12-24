@@ -47,7 +47,7 @@ nav {
   top: 0;
   background: white;
   height: 100vh;
-  width: 50%;
+  width: 75%;
   z-index: 999;
   text-transform: uppercase;
   transform: translateX(100%);
@@ -66,8 +66,8 @@ nav ul a {
   font-size: 1.2rem;
   font-family: poppins, sans-serif;
 }
-nav ul:hover {
-  background: none;
+nav ul a:hover {
+  background: var(--background-color-2);
 }
 nav .close {
   float: right;
@@ -75,7 +75,7 @@ nav .close {
   width: 2em;
 }
 nav .close path {
-  fill: var(--accent-color) !important;
+  fill: black !important;
 }
 
 header {

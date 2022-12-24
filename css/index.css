@@ -3,7 +3,7 @@
   width: 200px;
   border-radius: 100px;
   border: 0;
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .aboutmetext {
@@ -45,6 +45,4 @@
     display: flex;
     height: 90vh;
   }
-}
-
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

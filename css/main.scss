@@ -1,155 +1,151 @@
-:root {
-  --background-color: #222831;
-  --background-color-2: #f3f3f3;
-  --foreground-color: #393E46;
-  --accent-color: #00ADB5;
-  --text-color: #EEEEEE;
-  --secondary-text-color: #bfbfbf;
-}
+$background-color: #222831;
+$background-color-2: #30343b;
+$foreground-color: #393e46;
+$accent-color: #00adb5;
+$text-color: #eeeeee;
+$secondary-text-color: #bfbfbf;
 
 @font-face {
-  font-family: poppins;
+    font-family: poppins;
 }
 
 .text-main {
-  color: var(--text-color);
-  font-family: poppins, sans-serif;
+    color: $text-color;
+    font-family: poppins, sans-serif;
 }
 
 .text-main-2 {
-  color: var(--text-color);
-  font-family: poppins, sans-serif;
+    color: $text-color;
+    font-family: poppins, sans-serif;
 }
 
 .text-paragraph {
-  color: var(--secondary-text-color);
-  font-family: poppins, sans-serif;
+    color: $secondary-text-color;
+    font-family: poppins, sans-serif;
 }
 
 body {
-  margin: 1.5em;
-  background-color: var(--background-color);
+    margin: 1.5em;
+    background-color: $background-color;
 }
 
 .logo {
-  text-decoration: none;
-  font-family: Montserrat, sans-serif;
-  color: var(--text-color);
-  font-weight: bold;
-  font-size: 1.5rem;
-
-  &:hover {
     text-decoration: none;
-  }
+    font-family: Montserrat, sans-serif;
+    color: $text-color;
+    font-weight: bold;
+    font-size: 1.5rem;
+
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 nav {
-  position: fixed;
-  right: 0;
-  top: 0;
-  background: white;
-  height: 100vh;
-  width: 75%;
-  z-index: 999;
-  text-transform: uppercase;
-  transform: translateX(100%);
-  transition: transform .5s ease-in-out;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background: $foreground-color;
+    height: 100vh;
+    width: 75%;
+    z-index: 999;
+    text-transform: uppercase;
+    transform: translateX(100%);
+    transition: all 0.5s ease-in-out;
 
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 8em;
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 8em;
 
-    a {
-      color: var(--accent-color);
-      padding: .75em 2em;
-      display: block;
-      text-decoration: none;
-      font-size: 1.2rem;
-      font-family: poppins, sans-serif;
+        a {
+            color: $accent-color;
+            padding: 0.75em 2em;
+            display: block;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-family: poppins, sans-serif;
+            transition: 250ms ease-in-out;
 
-      &:hover {
-        background: var(--background-color-2);
-      }
+            &:hover {
+                background: $background-color-2;
+            }
+        }
     }
-  }
 
-  .close {
-    float: right;
-    margin: 1.5em 2em;
-    width: 2em;
-
-    path {
-      fill: black !important;
+    .close {
+        float: right;
+        margin: 1.5em 2em;
+        width: 2em;
     }
-  }
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 
-  svg {
-    width: 2em;
-    cursor: pointer;
+    svg {
+        width: 2em;
+        cursor: pointer;
 
-    path {
-      fill: white;
+        path {
+            fill: white;
+        }
     }
-  }
 }
 
-.open-nav {
-  transform: translateX(0);
+nav[data-toggled="true"] {
+    transform: translateX(0);
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
 }
 
 @media only screen and (min-width: 680px) {
-  body {
-    margin: 1.5em 5em;
-  }
+    body {
+        margin: 1.5em 5em;
+    }
 }
 
 @media only screen and (min-width: 920px) {
-  .menu {
-    display: none;
-  }
-  nav {
-    transform: translateX(0);
-    position: unset;
-    display: block;
-    width: auto;
-    height: auto;
-    background: none;
-
-    svg.close {
-      display: none;
+    .menu {
+        display: none;
     }
+    nav {
+        transform: translateX(0);
+        position: unset;
+        display: block;
+        width: auto;
+        height: auto;
+        background: none;
 
-    ul {
-      display: flex;
-      margin: 0;
-
-      a {
-        color: var(--text-color);
-        padding: .5em 1.5em;
-        font-size: 1rem;
-
-        &:hover {
-          color: var(--secondary-text-color);
-          background: none;
+        svg.close {
+            display: none;
         }
 
-        &:active {
-          color: var(--accent-color);
+        ul {
+            display: flex;
+            margin: 0;
+
+            a {
+                color: $text-color;
+                padding: 0.5em 1.5em;
+                font-size: 1rem;
+
+                &:hover {
+                    color: $secondary-text-color;
+                    background: none;
+                }
+
+                &:active {
+                    color: $accent-color;
+                }
+            }
         }
-      }
     }
-  }
 }
 
 @media only screen and (min-width: 1200px) {
-  .wrapper {
-    width: 1200px;
-    margin: 0 auto;
-  }
+    .wrapper {
+        width: 1200px;
+        margin: 0 auto;
+    }
 }

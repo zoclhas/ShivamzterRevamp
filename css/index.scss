@@ -1,52 +1,52 @@
 .pfp {
-  height: 200px;
-  width: 200px;
-  border-radius: 100px;
-  border: 0;
-  box-shadow: 0 0 10px black;
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    border: 0;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
 }
 
 .aboutmetext {
-  margin: 0;
-  padding-left: 5em;
-  text-align: left;
+    margin: 0;
+    padding-left: 5em;
+    text-align: left;
 }
 
 .text-paragraph {
-  padding-right: 1em;
+    padding-right: 1em;
 }
 
 @media only screen and (max-width: 679px) {
-  body {
-    margin: 1.5em 2em;
+    body {
+        margin: 1.5em 2em;
 
-    .aboutme {
-      display: block;
-      height: 90vh;
-      padding-top: 50%;
+        .aboutme {
+            display: block;
+            height: 90vh;
+            padding-top: 50%;
 
-      .pfp {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
+            .pfp {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
     }
-  }
-  .aboutmetext {
-    padding-left: 0;
-    text-align: center;
-  }
+    .aboutmetext {
+        padding-left: 0;
+        text-align: center;
+    }
 
-  .text-paragraph {
-    padding: 0;
-  }
+    .text-paragraph {
+        padding: 0;
+    }
 }
 
 @media only screen and (min-width: 680px) {
-  .aboutme {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    height: 90vh;
-  }
+    .aboutme {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        height: 90vh;
+    }
 }
